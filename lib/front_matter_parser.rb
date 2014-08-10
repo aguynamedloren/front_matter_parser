@@ -72,7 +72,7 @@ module FrontMatterParser
                                # End of string
                                \z
                                /mx))
-      front_matter = matches[:front_matter].gsub(/^[[:blank:]]*#{opts[:comment]}/, '')
+      front_matter = matches[:front_matter]
       parsed.front_matter = YAML.load(front_matter)
       parsed.content = matches[:content]
     else
